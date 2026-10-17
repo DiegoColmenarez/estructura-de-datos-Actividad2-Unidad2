@@ -16,13 +16,13 @@ public class Producto {
 
     private static void controlFallos(int cantidad){
         if (cantidad < 0){
-            throw new RuntimeException("");
+            throw new RuntimeException("No puede ser un numero negativo");
         }
     }
 
     private static void cantidadMinFallo(int cantidadMin){
         if (cantidadMin <= 0){
-            throw new RuntimeException("");
+            throw new RuntimeException("No puede ser 0 o un numero negativo");
         }
     }
 
