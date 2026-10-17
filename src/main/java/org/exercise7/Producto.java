@@ -43,4 +43,8 @@ public class Producto {
         cantidadMinFallo(cantidadMin);
         this.cantidadMin = cantidadMin;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
