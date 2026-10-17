@@ -4,16 +4,19 @@ import java.util.ArrayList;
 
 public class Ordenamiento {
 
-    public static void insertSort(ArrayList<Producto> productos) {
+    public static int insertSort(ArrayList<Producto> productos) {
+        int desplazamientos = 0;
         for (int i = 1; i < productos.size(); i++) {
             var actual = productos.get(i);
             int anterior = i - 1;
             while (anterior >= 0 && productos.get(anterior).getCantidad() > actual.getCantidad()) {
                 productos.set(anterior + 1, productos.get(anterior));
+                desplazamientos++;
                 anterior--;
             }
             productos.set(anterior + 1, actual);
         }
+        return desplazamientos;
     }
 
     public static ArrayList<Producto> obtenerProductosSinStock(ArrayList<Producto> productos){
@@ -35,7 +38,4 @@ public class Ordenamiento {
         }
         return resultado;
     }
-
-
-
 }
