@@ -38,4 +38,16 @@ public class Ordenamiento {
         }
         return resultado;
     }
+
+    public static ArrayList<Producto> obtenerAgotados(ArrayList<Producto> productosOrdenados) {
+        ArrayList<Producto> agotados = new ArrayList<>();
+        for (Producto p : productosOrdenados) {
+            if (p.getCantidad() == 0) {
+                agotados.add(p);
+            } else {
+                break;
+            }
+        }
+        return agotados;
+    }
 }
