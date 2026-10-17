@@ -7,14 +7,14 @@ public class Producto {
     private String nombre;
 
     public  Producto(String nombre, int cantidad, int cantidadMin){
-        controlFallos(cantidad);
+        cantidadFallo(cantidad);
         cantidadMinFallo(cantidadMin);
         this.nombre = nombre;
         this.cantidad = cantidad;
         this.cantidadMin = cantidadMin;
     }
 
-    private static void controlFallos(int cantidad){
+    private static void cantidadFallo(int cantidad){
         if (cantidad < 0){
             throw new RuntimeException("No puede ser un numero negativo");
         }
