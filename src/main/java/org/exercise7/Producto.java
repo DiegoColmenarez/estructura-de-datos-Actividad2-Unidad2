@@ -1,7 +1,8 @@
 package org.exercise7;
 
 public class Producto {
-    private final int cantidad;
+
+    private int cantidad;
 
     public  Producto(int cantidad){
         controlFallos(cantidad);
@@ -16,5 +17,10 @@ public class Producto {
 
     public int getCantidad() {
         return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        controlFallos(cantidad);
+        this.cantidad = cantidad;
     }
 }
