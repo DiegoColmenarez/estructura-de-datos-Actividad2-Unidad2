@@ -31,7 +31,7 @@ public class Producto {
     }
 
     public void setCantidad(int cantidad) {
-        controlFallos(cantidad);
+        cantidadFallo(cantidad);
         this.cantidad = cantidad;
     }
 
