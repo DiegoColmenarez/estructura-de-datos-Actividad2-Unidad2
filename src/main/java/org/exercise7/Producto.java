@@ -4,10 +4,12 @@ public class Producto {
 
     private int cantidad;
     private int cantidadMin;
+    private String nombre;
 
-    public  Producto(int cantidad, int cantidadMin){
+    public  Producto(String nombre, int cantidad, int cantidadMin){
         controlFallos(cantidad);
         cantidadMinFallo(cantidadMin);
+        this.nombre = nombre;
         this.cantidad = cantidad;
         this.cantidadMin = cantidadMin;
     }
