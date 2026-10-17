@@ -15,4 +15,14 @@ public class Ordenamiento {
             productos.set(anterior + 1, actual);
         }
     }
+
+    public static ArrayList<Producto> obtenerProductosSinStock(ArrayList<Producto> productos){
+        ArrayList<Producto> resultado = new ArrayList<>();
+        for (Producto producto : productos) {
+            if (producto.getCantidad() == 0) {
+                resultado.add(producto);
+            }
+        }
+        return resultado;
+    }
 }
