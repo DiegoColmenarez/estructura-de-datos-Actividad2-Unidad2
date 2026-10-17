@@ -25,4 +25,9 @@ public class Ordenamiento {
         }
         return resultado;
     }
+
+    public static ArrayList<Producto> obtenerProductosPocaCantidad(ArrayList<Producto> productos){
+        return null;
+    }
+
 }
