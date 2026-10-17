@@ -27,7 +27,13 @@ public class Ordenamiento {
     }
 
     public static ArrayList<Producto> obtenerProductosPocaCantidad(ArrayList<Producto> productos){
-        return null;
+        ArrayList<Producto> resultado = new ArrayList<>();
+        for (Producto producto : productos) {
+            if (producto.getCantidad() < producto.getCantidadMin()){
+                resultado.add(producto);
+            }
+        }
+        return resultado;
     }
 
 
