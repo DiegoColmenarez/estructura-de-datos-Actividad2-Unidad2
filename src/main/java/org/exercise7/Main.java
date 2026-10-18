@@ -30,7 +30,7 @@ public class Main {
                 case 2:
                     if (!estaOrdenado) {
                         System.out.println("Advertencia: Lista no ordenada. Utilizando busqueda lineal...");
-                        var agotados = obtenerAgotadosLineal(inventario);
+                        var agotados = obtenerAgotadosClasico(inventario);
                         mostrarLista(agotados, "PRODUCTOS AGOTADOS");
                     }
                     var agotados = obtenerAgotados(inventario);
