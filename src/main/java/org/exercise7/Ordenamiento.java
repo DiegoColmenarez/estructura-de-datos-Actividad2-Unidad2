@@ -19,7 +19,7 @@ public class Ordenamiento {
         return desplazamientos;
     }
 
-    public static ArrayList<Producto> obtenerProductosSinStock(ArrayList<Producto> productos){
+    public static ArrayList<Producto> obtenerAgotadosLineal(ArrayList<Producto> productos){
         ArrayList<Producto> resultado = new ArrayList<>();
         for (Producto producto : productos) {
             if (producto.getCantidad() == 0) {
