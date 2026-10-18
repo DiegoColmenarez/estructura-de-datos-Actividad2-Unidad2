@@ -19,11 +19,14 @@ public class Ordenamiento {
         return desplazamientos;
     }
 
-    public static ArrayList<Producto> obtenerAgotadosLineal(ArrayList<Producto> productos){
+    public static ArrayList<Producto> obtenerAgotados(ArrayList<Producto> productos){
         ArrayList<Producto> resultado = new ArrayList<>();
         for (Producto producto : productos) {
             if (producto.getCantidad() == 0) {
                 resultado.add(producto);
+            }
+            else {
+                break;
             }
         }
         return resultado;
@@ -39,15 +42,4 @@ public class Ordenamiento {
         return resultado;
     }
 
-    public static ArrayList<Producto> obtenerAgotados(ArrayList<Producto> productosOrdenados) {
-        ArrayList<Producto> agotados = new ArrayList<>();
-        for (Producto p : productosOrdenados) {
-            if (p.getCantidad() == 0) {
-                agotados.add(p);
-            } else {
-                break;
-            }
-        }
-        return agotados;
-    }
 }
